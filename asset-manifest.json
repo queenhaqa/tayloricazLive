@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/tayloricazLIve/static/css/main.87da128f.css",
-    "main.js": "/tayloricazLIve/static/js/main.a576793a.js",
+    "main.js": "/tayloricazLIve/static/js/main.f7c6041e.js",
     "static/media/lover.png": "/tayloricazLIve/static/media/lover.7fb9f6f3f1ca366389c7.png",
     "static/media/1989.png": "/tayloricazLIve/static/media/1989.00b229953a456f7f8de7.png",
     "static/media/taylorHoldingCats.png": "/tayloricazLIve/static/media/taylorHoldingCats.5ec58c593c599889a206.png",
@@ -16,10 +16,10 @@
     "static/media/fearless.png": "/tayloricazLIve/static/media/fearless.6bcbc3ef0c7d81db8333.png",
     "index.html": "/tayloricazLIve/index.html",
     "main.87da128f.css.map": "/tayloricazLIve/static/css/main.87da128f.css.map",
-    "main.a576793a.js.map": "/tayloricazLIve/static/js/main.a576793a.js.map"
+    "main.f7c6041e.js.map": "/tayloricazLIve/static/js/main.f7c6041e.js.map"
   },
   "entrypoints": [
     "static/css/main.87da128f.css",
-    "static/js/main.a576793a.js"
+    "static/js/main.f7c6041e.js"
   ]
 }
