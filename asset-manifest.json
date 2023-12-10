@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/tayloricazLive/static/css/main.87da128f.css",
-    "main.js": "/tayloricazLive/static/js/main.a9c8481e.js",
+    "main.css": "/tayloricazLive/static/css/main.e3635543.css",
+    "main.js": "/tayloricazLive/static/js/main.30b8724e.js",
     "static/media/lover.png": "/tayloricazLive/static/media/lover.7fb9f6f3f1ca366389c7.png",
     "static/media/1989.png": "/tayloricazLive/static/media/1989.00b229953a456f7f8de7.png",
     "static/media/taylorHoldingCats.png": "/tayloricazLive/static/media/taylorHoldingCats.5ec58c593c599889a206.png",
@@ -15,11 +15,11 @@
     "static/media/reputation.png": "/tayloricazLive/static/media/reputation.2324db6641705824e9c6.png",
     "static/media/fearless.png": "/tayloricazLive/static/media/fearless.6bcbc3ef0c7d81db8333.png",
     "index.html": "/tayloricazLive/index.html",
-    "main.87da128f.css.map": "/tayloricazLive/static/css/main.87da128f.css.map",
-    "main.a9c8481e.js.map": "/tayloricazLive/static/js/main.a9c8481e.js.map"
+    "main.e3635543.css.map": "/tayloricazLive/static/css/main.e3635543.css.map",
+    "main.30b8724e.js.map": "/tayloricazLive/static/js/main.30b8724e.js.map"
   },
   "entrypoints": [
-    "static/css/main.87da128f.css",
-    "static/js/main.a9c8481e.js"
+    "static/css/main.e3635543.css",
+    "static/js/main.30b8724e.js"
   ]
 }
