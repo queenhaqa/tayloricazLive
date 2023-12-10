@@ -27,11 +27,11 @@ export const AlbumsOptions = ({ numOfSongs }) => {
 
   return (
     <div className="flex flex-col items-center gap-6">
-      <div className="text-2xl">choose a song or an album</div>
-      <div className="flex max-w-full items-baseline gap-5 ">
+      <div className="text-4xl lg:text-2xl">choose a song or an album</div>
+      <div className="flex sm:flex-col lg:flex-row max-w-full items-baseline gap-5 justify-items-center	">
         {map(
           ({ img, albumNum }) => (
-            <div className="flex flex-col max-w-[10rem] items-center">
+            <div className="flex flex-col max-w-[30rem]">
               <img
                 className={"cursor-pointer hover:scale-105"}
                 src={img}
@@ -49,7 +49,7 @@ export const AlbumsOptions = ({ numOfSongs }) => {
                   })}
                 }
               />
-              <div className="grid divide-y ">
+              <div className="flex flex-col max-w-[30rem] divide-y ">
                 {flatMap(
                   map(AlbumSongOption),
                   find(pipe(prop("album_id"), equals(albumNum)), songsInAlbums)
