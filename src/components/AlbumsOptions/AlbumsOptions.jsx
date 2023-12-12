@@ -1,29 +1,12 @@
-import { equals, find, flatMap, map, pipe, prop } from "lodash/fp";
+import { equals, find, map, pipe, prop } from "lodash/fp";
 import { useNavigate } from "react-router-dom";
 import { getRandomInt } from "../../functions";
-import { albumsArray } from "./constants";
 import songsInAlbums from "../../songsInAlbums.json";
+import { SongList } from "./SongList/SongList";
+import { albumsArray } from "./constants";
 
 export const AlbumsOptions = ({ numOfSongs }) => {
   const navigate = useNavigate();
-
-  const AlbumSongOption = ({ song_id, title, album_id }) => (
-    <div
-      key={song_id}
-      onClick={() =>
-        navigate(`songquiz`, {
-          state: {
-            songNum: song_id,
-            albumNum: album_id,
-            numOfSongs,
-          },
-        })
-      }
-      className="cursor-pointer"
-    >
-      {title}
-    </div>
-  );
 
   return (
     <div className="flex flex-col items-center gap-6">
@@ -31,30 +14,31 @@ export const AlbumsOptions = ({ numOfSongs }) => {
       <div className="flex sm:flex-col lg:flex-row max-w-full items-baseline gap-5 justify-items-center	">
         {map(
           ({ img, albumNum }) => (
-            <div className="flex flex-col max-w-[30rem]">
+            <div key={albumNum} className="flex flex-col max-w-[30rem]">
               <img
-                className={"cursor-pointer hover:scale-105"}
+                className={
+                  "cursor-pointer hover:scale-105 lg:h-[2.5rem] lg:w-[18rem] h-[10rem] w-[19rem]"
+                }
                 src={img}
                 key={albumNum}
                 alt="speakNow"
-                onClick={() =>{
-                  const songsInAlbum = find(pipe(prop("album_id"), equals(albumNum)), songsInAlbums).songs
-                  
-                    navigate(`songquiz`, {
-                      state: {
-                        songNum: songsInAlbum[getRandomInt(songsInAlbum.length)].song_id,
-                        numOfSongs,
-                        albumNum,
-                      },
-                  })}
-                }
+                onClick={() => {
+                  const songsInAlbum = find(
+                    pipe(prop("album_id"), equals(albumNum)),
+                    songsInAlbums
+                  ).songs;
+
+                  navigate(`songquiz`, {
+                    state: {
+                      songNum:
+                        songsInAlbum[getRandomInt(songsInAlbum.length)].song_id,
+                      numOfSongs,
+                      albumNum,
+                    },
+                  });
+                }}
               />
-              <div className="flex flex-col max-w-[30rem] divide-y ">
-                {flatMap(
-                  map(AlbumSongOption),
-                  find(pipe(prop("album_id"), equals(albumNum)), songsInAlbums)
-                )}
-              </div>
+              <SongList album_id={albumNum} numOfSongs={numOfSongs} />
             </div>
           ),
           albumsArray
