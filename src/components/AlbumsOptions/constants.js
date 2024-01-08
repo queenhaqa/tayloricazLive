@@ -4,7 +4,7 @@ import red from "../../assets/images/red.webp";
 import midnights from "../../assets/images/midnights.png";
 import reputation from "../../assets/images/reputation.png";
 import lover from "../../assets/images/lover.png";
-import eightyNine from "../../assets/images/1989.png";
+import eightyNine from "../../assets/images/1989tv.jfif";
 import fearless from "../../assets/images/fearless.png";
 import debut from "../../assets/images/debut.png";
 import folklore from "../../assets/images/folklore.png";
