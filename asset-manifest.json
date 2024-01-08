@@ -1,9 +1,8 @@
 {
   "files": {
-    "main.css": "/tayloricazLive/static/css/main.63a7a29c.css",
-    "main.js": "/tayloricazLive/static/js/main.0d96d75d.js",
+    "main.css": "/tayloricazLive/static/css/main.8b0e464a.css",
+    "main.js": "/tayloricazLive/static/js/main.8de1afe1.js",
     "static/media/lover.png": "/tayloricazLive/static/media/lover.7fb9f6f3f1ca366389c7.png",
-    "static/media/1989.png": "/tayloricazLive/static/media/1989.00b229953a456f7f8de7.png",
     "static/media/taylorHoldingCats.png": "/tayloricazLive/static/media/taylorHoldingCats.5ec58c593c599889a206.png",
     "static/media/midnights.png": "/tayloricazLive/static/media/midnights.74604c8bb00022eed7f3.png",
     "static/media/taylorEras.avif": "/tayloricazLive/static/media/taylorEras.b4cbaf54297fb5b8d1ae.avif",
@@ -14,12 +13,13 @@
     "static/media/evermore.png": "/tayloricazLive/static/media/evermore.88741e5d04bfbf43de39.png",
     "static/media/reputation.png": "/tayloricazLive/static/media/reputation.2324db6641705824e9c6.png",
     "static/media/fearless.png": "/tayloricazLive/static/media/fearless.6bcbc3ef0c7d81db8333.png",
+    "static/media/1989tv.jfif": "/tayloricazLive/static/media/1989tv.0212a0768f67bb6a2d9e.jfif",
     "index.html": "/tayloricazLive/index.html",
-    "main.63a7a29c.css.map": "/tayloricazLive/static/css/main.63a7a29c.css.map",
-    "main.0d96d75d.js.map": "/tayloricazLive/static/js/main.0d96d75d.js.map"
+    "main.8b0e464a.css.map": "/tayloricazLive/static/css/main.8b0e464a.css.map",
+    "main.8de1afe1.js.map": "/tayloricazLive/static/js/main.8de1afe1.js.map"
   },
   "entrypoints": [
-    "static/css/main.63a7a29c.css",
-    "static/js/main.0d96d75d.js"
+    "static/css/main.8b0e464a.css",
+    "static/js/main.8de1afe1.js"
   ]
 }
