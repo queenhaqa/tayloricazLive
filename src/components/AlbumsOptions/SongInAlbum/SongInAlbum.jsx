@@ -15,7 +15,7 @@ export const SongInAlbum = ({ song_id, title, album_id, numOfSongs }) => {
           },
         })
       }
-      className="cursor-pointer"
+      className="cursor-pointer text-center "
     >
       {title}
     </div>

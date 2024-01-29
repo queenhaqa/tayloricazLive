@@ -20,7 +20,7 @@ export const HomePage = () => {
           take me to a random song quiz
         </button>
       </Link>
-      <AlbumsOptions numOfSongs={allSongs.length}/>
+      <AlbumsOptions numOfSongs={allSongs.length} />
     </div>
   );
 };
