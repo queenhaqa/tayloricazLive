@@ -7,15 +7,8 @@ import { SongInAlbum } from "../SongInAlbum/SongInAlbum";
 export const SongList = ({ album_id, numOfSongs }) => {
   const [isListOpen, setIsListOpen] = useState(!isMobile);
 
-  const handleSongsToggle = () => {
-    setIsListOpen((prev) => !prev);
-  };
-
   return (
     <div key={album_id}>
-      <button className="max-w-full" onClick={() => handleSongsToggle()}>
-        button
-      </button>
       <div className="flex flex-col w-0.5/5 divide-y ">
         {isListOpen &&
           map(
