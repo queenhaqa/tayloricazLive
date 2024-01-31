@@ -9,6 +9,7 @@ import { SongList } from "../AlbumsOptions/SongList/SongList";
 export const AlbumAccordion = ({ img, albumNum, color, numOfSongs }) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const navigate = useNavigate();
+  const [isHovering, setIsHovering] = useState(false);
 
   return (
     <Accordion
@@ -47,9 +48,14 @@ export const AlbumAccordion = ({ img, albumNum, color, numOfSongs }) => {
       </AccordionSummary>
       <AccordionDetails
         sx={{
-          overflow: "auto",
+          overflow: isHovering ? "auto" : "hidden",
           maxHeight: "18rem",
+          scrollbarGutter: "stable both-edges",
+          scrollbarWidth: "thin",
+          scrollbarColor: `${color} white`,
         }}
+        onMouseEnter={() => setIsHovering(true)}
+        onMouseLeave={() => setIsHovering(false)}
       >
         <SongList album_id={albumNum} numOfSongs={numOfSongs} />
       </AccordionDetails>
