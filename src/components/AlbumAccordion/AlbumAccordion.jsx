@@ -6,7 +6,13 @@ import { getRandomInt } from "../../functions";
 import songsInAlbums from "../../songsInAlbums";
 import { SongList } from "../AlbumsOptions/SongList/SongList";
 
-export const AlbumAccordion = ({ img, albumNum, color, numOfSongs }) => {
+export const AlbumAccordion = ({
+  img,
+  albumNum,
+  color,
+  numOfSongs,
+  textColor,
+}) => {
   const [isExpanded, setIsExpanded] = useState(false);
   const navigate = useNavigate();
   const [isHovering, setIsHovering] = useState(false);
@@ -17,6 +23,7 @@ export const AlbumAccordion = ({ img, albumNum, color, numOfSongs }) => {
       sx={{
         borderRadius: "25px !important",
         backgroundColor: color,
+        color: textColor,
       }}
       onMouseEnter={() => setIsExpanded(true)}
       onMouseLeave={() => setIsExpanded(false)}
@@ -62,7 +69,10 @@ export const AlbumAccordion = ({ img, albumNum, color, numOfSongs }) => {
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
       >
-        <SongList album_id={albumNum} numOfSongs={numOfSongs} />
+        <SongList
+          album_id={albumNum}
+          numOfSongs={numOfSongs}
+        />
       </AccordionDetails>
     </Accordion>
   );

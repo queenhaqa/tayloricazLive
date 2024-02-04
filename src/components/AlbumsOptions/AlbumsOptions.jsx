@@ -9,7 +9,7 @@ export const AlbumsOptions = ({ numOfSongs }) => {
       <div className="text-4xl lg:text-2xl">choose a song or an album</div>
       <div className="flex sm:flex-col lg:flex-row max-w-full gap-5 justify-items-center	">
         {map(
-          ({ img, albumNum, color }) => (
+          ({ img, albumNum, color, textColor }) => (
             <div
               key={albumNum}
               className="flex flex-col max-w-[30rem] align-items: flex-start"
@@ -19,6 +19,7 @@ export const AlbumsOptions = ({ numOfSongs }) => {
                 color={color}
                 img={img}
                 numOfSongs={numOfSongs}
+                textColor={textColor}
               />
             </div>
           ),
