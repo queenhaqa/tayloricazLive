@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/tayloricazLive/static/css/main.6224359a.css",
-    "main.js": "/tayloricazLive/static/js/main.83ad927d.js",
-    "static/media/lover.png": "/tayloricazLive/static/media/lover.7fb9f6f3f1ca366389c7.png",
+    "main.js": "/tayloricazLive/static/js/main.f6089a5e.js",
+    "static/media/lover.png": "/tayloricazLive/static/media/lover.e54032626421f3fe37fa.png",
     "static/media/taylorHoldingCats.png": "/tayloricazLive/static/media/taylorHoldingCats.5ec58c593c599889a206.png",
+    "static/media/1989tv.png": "/tayloricazLive/static/media/1989tv.c45b1cc4c2d04d1d902d.png",
     "static/media/midnights.png": "/tayloricazLive/static/media/midnights.74604c8bb00022eed7f3.png",
     "static/media/taylorEras.avif": "/tayloricazLive/static/media/taylorEras.b4cbaf54297fb5b8d1ae.avif",
+    "static/media/evermore.png": "/tayloricazLive/static/media/evermore.a0abdc6308088aa04239.png",
     "static/media/speakNow.webp": "/tayloricazLive/static/media/speakNow.01349e7538d0806c6538.webp",
     "static/media/loverHouse.jpg": "/tayloricazLive/static/media/loverHouse.268590eaf96f50f7d0da.jpg",
     "static/media/red.webp": "/tayloricazLive/static/media/red.1bc416f00a983aa9abce.webp",
     "static/media/folklore.png": "/tayloricazLive/static/media/folklore.d442f2212781a23b591f.png",
-    "static/media/evermore.png": "/tayloricazLive/static/media/evermore.88741e5d04bfbf43de39.png",
     "static/media/reputation.png": "/tayloricazLive/static/media/reputation.2324db6641705824e9c6.png",
     "static/media/fearless.png": "/tayloricazLive/static/media/fearless.6bcbc3ef0c7d81db8333.png",
-    "static/media/1989tv.jfif": "/tayloricazLive/static/media/1989tv.0212a0768f67bb6a2d9e.jfif",
     "index.html": "/tayloricazLive/index.html",
     "main.6224359a.css.map": "/tayloricazLive/static/css/main.6224359a.css.map",
-    "main.83ad927d.js.map": "/tayloricazLive/static/js/main.83ad927d.js.map"
+    "main.f6089a5e.js.map": "/tayloricazLive/static/js/main.f6089a5e.js.map"
   },
   "entrypoints": [
     "static/css/main.6224359a.css",
-    "static/js/main.83ad927d.js"
+    "static/js/main.f6089a5e.js"
   ]
 }
