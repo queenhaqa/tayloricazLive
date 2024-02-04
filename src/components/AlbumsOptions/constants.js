@@ -35,9 +35,9 @@ export const albumsArray = [
     color: alpha("#972B2D", 0.75),
     textColor: "#000000",
   },
-  { img: eightyNine, albumNum: 1, color: "#d6e9ff", textColor: "#FFFFFF" },
+  { img: eightyNine, albumNum: 1, color: "#d6e9ff", textColor: "#000000" },
   { img: reputation, albumNum: 6, color: "#727272", textColor: "#000000" },
-  { img: lover, albumNum: 7, color: "#eaadd6", textColor: "#FFFFFFF" },
+  { img: lover, albumNum: 7, color: "#eaadd6", textColor: "#000000" },
   { img: folklore, albumNum: 8, color: "#bababa", textColor: "#000000" },
   {
     img: evermore,
