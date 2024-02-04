@@ -51,8 +51,13 @@ export const AlbumAccordion = ({ img, albumNum, color, numOfSongs }) => {
           overflow: isHovering ? "auto" : "hidden",
           maxHeight: "18rem",
           scrollbarGutter: "stable both-edges",
-          scrollbarWidth: "thin",
-          scrollbarColor: `${color} white`,
+          "&::-webkit-scrollbar": {
+            width: "5px",
+          },
+          "&::-webkit-scrollbar-thumb": {
+            background: "white",
+            borderRadius: "10px",
+          },
         }}
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
