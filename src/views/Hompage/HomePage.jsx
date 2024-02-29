@@ -4,11 +4,20 @@ import classes from "./HomePage.module.css";
 import { getRandomInt } from "../../functions";
 import { AlbumsOptions } from "../../components/AlbumsOptions";
 import allSongs from "../../allSongs.json";
+import { NewReleases } from "../../components/NewReleases/NewReleases";
+import { Grid, Stack } from "@mui/material";
 
 export const HomePage = () => {
   return (
     <div className={classes.allErasImg}>
-      <SiteBanner />
+      <Grid container>
+        <Grid item md={2}>
+          <NewReleases />
+        </Grid>
+        <Grid item md={8}>
+          <SiteBanner />
+        </Grid>
+      </Grid>
       <Link
         to={`/songquiz`}
         state={{

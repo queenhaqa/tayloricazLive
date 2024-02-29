@@ -4,12 +4,14 @@ import { isMobile } from "react-device-detect";
 import songsInAlbums from "../../../songsInAlbums.json";
 import { SongInAlbum } from "../SongInAlbum/SongInAlbum";
 
-export const SongList = ({ album_id, numOfSongs }) => {
+export const SongList = ({ album_id, numOfSongs, color }) => {
   const [isListOpen, setIsListOpen] = useState(!isMobile);
 
   return (
     <div key={album_id}>
-      <div className="flex flex-col w-0.5/5 divide-y ">
+      <div
+        className={`flex flex-col w-0.5/5 divide-y divide-black divide-slate-800/25 `}
+      >
         {isListOpen &&
           map(
             ({ album_id, song_id, title }) => (

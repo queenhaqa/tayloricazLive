@@ -69,10 +69,7 @@ export const AlbumAccordion = ({
         onMouseEnter={() => setIsHovering(true)}
         onMouseLeave={() => setIsHovering(false)}
       >
-        <SongList
-          album_id={albumNum}
-          numOfSongs={numOfSongs}
-        />
+        <SongList album_id={albumNum} numOfSongs={numOfSongs} color={color} />
       </AccordionDetails>
     </Accordion>
   );

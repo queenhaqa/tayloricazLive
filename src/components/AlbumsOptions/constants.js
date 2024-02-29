@@ -8,6 +8,7 @@ import eightyNine from "../../assets/images/1989tv.png";
 import fearless from "../../assets/images/fearless.png";
 import debut from "../../assets/images/debut.png";
 import folklore from "../../assets/images/folklore.png";
+import newAlbum from "../../assets/images/newAlbum.webp";
 import { alpha } from "@mui/material";
 
 export const albumsArray = [
@@ -51,4 +52,10 @@ export const albumsArray = [
     color: alpha("#53658F", 0.6),
     textColor: "#000000",
   },
+  // {
+  //   img: newAlbum,
+  //   albumNum: 11,
+  //   color: "white",
+  //   textColor: "#000000",
+  // },
 ];
