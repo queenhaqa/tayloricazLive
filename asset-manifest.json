@@ -1,11 +1,10 @@
 {
   "files": {
-    "main.css": "/tayloricazLive/static/css/main.ea730fd8.css",
-    "main.js": "/tayloricazLive/static/js/main.6395b242.js",
+    "main.css": "/tayloricazLive/static/css/main.21831a11.css",
+    "main.js": "/tayloricazLive/static/js/main.36bb7d9e.js",
     "static/media/lover.png": "/tayloricazLive/static/media/lover.e54032626421f3fe37fa.png",
     "static/media/taylorHoldingCats.png": "/tayloricazLive/static/media/taylorHoldingCats.5ec58c593c599889a206.png",
     "static/media/1989tv.png": "/tayloricazLive/static/media/1989tv.c45b1cc4c2d04d1d902d.png",
-    "static/media/newAlbum.webp": "/tayloricazLive/static/media/newAlbum.181131f069ab203b3ba9.webp",
     "static/media/midnights.png": "/tayloricazLive/static/media/midnights.74604c8bb00022eed7f3.png",
     "static/media/taylorEras.avif": "/tayloricazLive/static/media/taylorEras.b4cbaf54297fb5b8d1ae.avif",
     "static/media/evermore.png": "/tayloricazLive/static/media/evermore.a0abdc6308088aa04239.png",
@@ -14,13 +13,14 @@
     "static/media/red.webp": "/tayloricazLive/static/media/red.1bc416f00a983aa9abce.webp",
     "static/media/folklore.png": "/tayloricazLive/static/media/folklore.d442f2212781a23b591f.png",
     "static/media/reputation.png": "/tayloricazLive/static/media/reputation.2324db6641705824e9c6.png",
+    "static/media/ttpd.png": "/tayloricazLive/static/media/ttpd.004fdf97a60709601af1.png",
     "static/media/fearless.png": "/tayloricazLive/static/media/fearless.6bcbc3ef0c7d81db8333.png",
     "index.html": "/tayloricazLive/index.html",
-    "main.ea730fd8.css.map": "/tayloricazLive/static/css/main.ea730fd8.css.map",
-    "main.6395b242.js.map": "/tayloricazLive/static/js/main.6395b242.js.map"
+    "main.21831a11.css.map": "/tayloricazLive/static/css/main.21831a11.css.map",
+    "main.36bb7d9e.js.map": "/tayloricazLive/static/js/main.36bb7d9e.js.map"
   },
   "entrypoints": [
-    "static/css/main.ea730fd8.css",
-    "static/js/main.6395b242.js"
+    "static/css/main.21831a11.css",
+    "static/js/main.36bb7d9e.js"
   ]
 }
