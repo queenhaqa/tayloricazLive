@@ -58,4 +58,10 @@ export const albumsArray = [
     color: alpha("#edebe7", 0.8),
     textColor: "#000000",
   },
+  // {
+  //   img: ttpd-v2,
+  //   albumNum: 11,
+  //   color: alpha("#edebe7", 0.8),
+  //   textColor: "#000000",
+  // }
 ];
