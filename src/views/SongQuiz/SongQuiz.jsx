@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import classes from "./SongQuiz.module.css";
 import {
   formatLyricsForDisplay,
@@ -28,20 +28,20 @@ export const SongQuiz = () => {
   const [gaveUp, setGaveUp] = useState(false);
   const [restartTimer, setRestartTimer] = useState(false);
   const navigate = useNavigate();
+  const inputRef = useRef();
   const lyricsGuessed = filter(
     overSome(prop("isVisible"), !prop("losingWord")),
     lyricsProps
   )?.length;
-
   const updateWordDisplay = (event) => setWordGuess(event.target.value);
-  const wordsTable = useMemo(
-    () =>
-      mapIndexed(
-        (lyricProps, index) => <WordCell key={index} {...lyricProps} />,
-        lyricsProps
-      ),
+
+  const wordsTable = useMemo(() =>
+      mapIndexed((lyricProps, index) => <WordCell key={index} {...lyricProps} />, lyricsProps),
     [lyricsProps]
   );
+
+  useEffect(() => inputRef?.current?.focus(), []);
+  
   useEffect(() => {
     setLyricsProps((prevValue) =>
       map(({ word, isVisible, losingWord }) => {
@@ -57,17 +57,12 @@ export const SongQuiz = () => {
 
   const regenerateSong = () => {
     setRestartTimer((prevValue) => !prevValue);
-    navigate(`/songquiz`, {
-      state: {
-        songNum: getRandomInt(state.numOfSongs),
-        numOfSongs: state.numOfSongs,
-      },
-    });
+    navigate(`/songquiz`, {state: {songNum: getRandomInt(state.numOfSongs), numOfSongs: state.numOfSongs}});
   };
+
   const lose = () => {
     setGaveUp(true);
-    setLyricsProps(
-      map((wordProps) =>
+    setLyricsProps(map((wordProps) =>
         !wordProps.isVisible
           ? { ...wordProps, losingWord: true }
           : { ...wordProps }
@@ -79,21 +74,16 @@ export const SongQuiz = () => {
     <div className={classes.App}>
       <Link to="/">
         <img
-          className="fixed top-1 left-1 w-16"
-          src={loverHouse}
-          alt="lover house"
+          className="fixed top-1 left-1 w-16" src={loverHouse} alt="lover house"
         />
       </Link>
       <input
-        onChange={updateWordDisplay}
-        value={wordGuess}
+        onChange={updateWordDisplay} value={wordGuess} ref={inputRef}
         className="bg-gray-50 border border-gray-300 rounded disabled:opacity-75 p-4 focus:ring-violet-300"
-        type="text"
-        placeholder="put a word in bitch!"
+        type="text" placeholder="put a word in bitch!"
       ></input>
       <div className="self-start w-2/4">
-        <Timer
-          stopTimer={gaveUp || lyricsGuessed === lyricsProps?.length}
+        <Timer stopTimer={gaveUp || lyricsGuessed === lyricsProps?.length}
           restartTimer={restartTimer}
         />
       </div>
@@ -111,10 +101,7 @@ export const SongQuiz = () => {
         ) : (
           <div>
             YOU WON
-            <img
-              src="https://gifdb.com/images/high/taylor-swift-happy-dance-0sukpoogfw30zukw.gif"
-              alt="taylor dance"
-            />
+            <img src="https://gifdb.com/images/high/taylor-swift-happy-dance-0sukpoogfw30zukw.gif" alt="taylor dance"/>
           </div>
         )
       ) : (
