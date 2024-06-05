@@ -26,6 +26,7 @@ export const SongQuiz = () => {
     )
   );
   const [gaveUp, setGaveUp] = useState(false);
+  const [showBlanks, seShowBlanks] = useState(false);
   const [restartTimer, setRestartTimer] = useState(false);
   const navigate = useNavigate();
   const inputRef = useRef();
@@ -64,11 +65,21 @@ export const SongQuiz = () => {
     setGaveUp(true);
     setLyricsProps(map((wordProps) =>
         !wordProps.isVisible
-          ? { ...wordProps, losingWord: true }
+          ? { ...wordProps, isVisible: true, losingWord: true }
           : { ...wordProps }
       )
     );
   };
+  
+  const toggleBlanks = () => {
+    seShowBlanks(prevValue => !prevValue)
+    setLyricsProps(map((wordProps) =>
+        !wordProps.isVisible
+          ? { ...wordProps, losingWord: !showBlanks }
+          : { ...wordProps }
+      )
+    );
+  }
 
   return (
     <div className={classes.App}>
@@ -93,6 +104,7 @@ export const SongQuiz = () => {
             <div className="font-playfair">
               you guessed {lyricsGuessed} lyrics out of {lyricsProps?.length}
             </div>
+            <button onClick={toggleBlanks}>{!showBlanks ? "show" : "hide"} blanks</button>
             <div className="h-4/6 flex-col flex flex-wrap gap-x-3 justify-start items-stretch content-center">
               {wordsTable}
             </div>
