@@ -6,6 +6,7 @@ import { getRandomInt } from "../../functions";
 import songsInAlbums from "../../songsInAlbums";
 import { SongList } from "../AlbumsOptions/SongList/SongList";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import { isMobile } from "react-device-detect";
 
 export const AlbumAccordion = ({
   img,
@@ -19,8 +20,8 @@ export const AlbumAccordion = ({
   const [isHovering, setIsHovering] = useState(false);
   const summaryRef = useRef();
 
-  useEffect(() => {isExpanded && summaryRef?.current?.scrollIntoView({behavior: "smooth"})}, [isExpanded, summaryRef])
-
+  useEffect(() => { isExpanded && summaryRef?.current?.scrollIntoView({ behavior: "smooth" }) }, [isExpanded, summaryRef])
+  console.log(albumNum, isExpanded);
 
   return (
     <Accordion
@@ -30,11 +31,14 @@ export const AlbumAccordion = ({
         backgroundColor: color,
         color: textColor,
       }}
-      onMouseEnter={() => setIsExpanded(true)}
-      onMouseLeave={() => setIsExpanded(false)}
+      {...(isMobile && {
+        onMouseEnter: () => setIsExpanded(true),
+        onMouseLeave: () => setIsExpanded(false)
+      })}
       expanded={isExpanded}
     >
-      <AccordionSummary ref={summaryRef} expandIcon={<ExpandMoreIcon onClick={() => setIsExpanded(prevState => !prevState)}/>}>
+      <AccordionSummary ref={summaryRef} expandIcon={<ExpandMoreIcon onClick={(e) => {e.stopPropagation()
+        setIsExpanded(prevState => !prevState)}} />}>
         <img
           className={
             "cursor-pointer hover:scale-105 lg:h-[2.5rem] lg:w-[18rem] h-[10rem] w-[19rem]"
@@ -60,8 +64,8 @@ export const AlbumAccordion = ({
       </AccordionSummary>
       <AccordionDetails
         sx={{
-          overflow: isHovering ? "auto" : "hidden",
-          maxHeight: "18rem",
+          overflowY: isHovering || isMobile ? "scroll" : "hidden",
+          height: isMobile ? "fit-content" : "18rem",
           flexShrink: 0,
           scrollbarGutter: "stable both-edges",
           "&::-webkit-scrollbar": {
@@ -72,8 +76,10 @@ export const AlbumAccordion = ({
             borderRadius: "10px",
           },
         }}
-        onMouseEnter={() => setIsHovering(true)}
-        onMouseLeave={() => setIsHovering(false)}
+        {...(isMobile && {
+          onMouseEnter: () => setIsHovering(true),
+          onMouseLeave: () => setIsHovering(false)
+        })}
       >
         <SongList album_id={albumNum} numOfSongs={numOfSongs} color={color} />
       </AccordionDetails>

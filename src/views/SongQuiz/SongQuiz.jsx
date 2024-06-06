@@ -90,10 +90,10 @@ export const SongQuiz = () => {
       </Link>
       <input
         onChange={updateWordDisplay} value={wordGuess} ref={inputRef}
-        className="bg-gray-50 border border-gray-300 rounded disabled:opacity-75 p-4 focus:ring-violet-300"
+        className="bg-gray-50 border border-gray-300 w-[50vw] sticky top-12 rounded disabled:opacity-75 p-4 focus:ring-violet-300"
         type="text" placeholder="put a word in bitch!"
       ></input>
-      <div className="self-start w-2/4">
+      <div className="self-start w-2/4 mt-12">
         <Timer stopTimer={gaveUp || lyricsGuessed === lyricsProps?.length}
           restartTimer={restartTimer}
         />
