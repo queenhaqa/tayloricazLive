@@ -62,6 +62,7 @@ export const AlbumAccordion = ({
         sx={{
           overflow: isHovering ? "auto" : "hidden",
           maxHeight: "18rem",
+          flexShrink: 0,
           scrollbarGutter: "stable both-edges",
           "&::-webkit-scrollbar": {
             width: "5px",
